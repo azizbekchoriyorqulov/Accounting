@@ -20,10 +20,5 @@ public class BaseEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected UUID id;
 
-    @CreationTimestamp
-    protected LocalDateTime createdDate;
-
-    @UpdateTimestamp
-    protected LocalDateTime updatedDate;
 
 }

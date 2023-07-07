@@ -1,6 +1,6 @@
 package com.example.accounting.entity;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity(name = "calculation")
@@ -10,5 +10,12 @@ import lombok.*;
 @Setter
 @Builder
 public class CalculationTable  extends BaseEntity{
-private String
+public  double amount;
+@OneToOne
+public Employee employee;
+public float rate;
+@ManyToOne
+public Organization organization;
+@Enumerated(EnumType.STRING)
+public CalculationType taype;
 }

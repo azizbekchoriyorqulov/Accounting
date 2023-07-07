@@ -1,7 +1,10 @@
 package com.example.accounting.repository;
 
+import com.example.accounting.entity.CalculationTable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CalculationTableRepository extends JpaRepository {
+import java.util.UUID;
+
+public interface CalculationTableRepository extends JpaRepository <CalculationTable, UUID> {
 }
 
