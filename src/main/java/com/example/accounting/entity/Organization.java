@@ -7,7 +7,7 @@ import jakarta.persistence.OneToOne;
 import lombok.*;
 
 
-@Entity(name = "employee")
+@Entity(name = "organization")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -17,6 +17,6 @@ public class Organization extends BaseEntity {
     public String name;
     @ManyToOne
     public Region region;
-    @OneToOne
+    @ManyToOne
 public Organization parent;
 }
