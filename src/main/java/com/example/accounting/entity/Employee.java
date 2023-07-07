@@ -2,7 +2,9 @@ package com.example.accounting.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -13,11 +15,12 @@ import java.time.LocalDateTime;
 @Setter
 @Builder
 public class Employee extends BaseEntity {
-    public String Firstname;
-    public String LastName;
+    public String firstname;
+    public String lastName;
     public Long pinfl;
+    @CreationTimestamp
    public LocalDateTime hireDate;
-   @ManyToMany
+   @ManyToOne
     public Organization organization;
 
 
