@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class Employee extends BaseEntity {
     public String firstname;
     public String lastName;
-    public Long pinfl;
+    public String pinfl;
     @CreationTimestamp
    public LocalDateTime hireDate;
    @ManyToOne
